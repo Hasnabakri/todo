@@ -1,0 +1,76 @@
+
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+
+<style>
+.ss{
+     	width: 250px;
+	margin: 50px  10px 40px 150px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	box-shadow: 0 0 15px #0066CC;
+	-moz-box-shadow: 0 0 15px #0066CC;
+	-webkit-box-shadow: 0 0 15px #0066CC;
+}
+
+@media screen and (max-width:1000px) {
+    #bar1,
+    #bar2 {
+        width: 39%;
+    }
+    
+    .sidebar {
+        float: left;
+        margin: 0 0 20px 1%;
+        padding: 0;
+    }
+}
+@media screen and (max-width:540px) {
+    #bar1,
+    #bar2 {
+        clear: both;
+        width: 100%;
+    }
+    
+    .sidebar {
+        float: left;
+        margin: 0 0 20px 1%;
+        padding: 0;
+    }
+    
+    #content {
+        clear: both;
+        width: 100%;
+    }
+    
+    #content .bloc {
+        margin: 0;
+    }
+}
+
+</style>
+
+<div class="ss">
+<p><h2>TODO.COM</h2>
+
+<p><a href="{{ path('ajoutertache') }}"><h2>+</h2></a><p>
+A faire :
+<ul> 
+{% for p in tache %}
+  
+  <li>  <a href="{{ path('listune', { 'id': p.id }) }}">{{p.intitule}} </a></br>
+
+
+ {% else %}
+	Aucune tâche n'a été trouvée.
+     {% endfor %}
+
+ <h2>copyright..</h2>
+
+</div>
+{% endblock  %}
