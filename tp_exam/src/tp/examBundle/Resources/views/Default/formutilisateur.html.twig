@@ -1,0 +1,42 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<style>
+.ss{
+     	width: 250px;
+	margin: 50px  10px 40px 150px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	box-shadow: 0 0 15px #0066CC;
+	-moz-box-shadow: 0 0 15px #0066CC;
+	-webkit-box-shadow: 0 0 15px #0066CC;
+}
+</style>
+
+<div class="ss">
+
+<table>
+<tr>
+<td><h3>
+TODO.COM
+</h3>
+</td>
+</tr>
+{{form_start(form)}}<br>
+<tr>
+<td> utilisateur:</td>
+</tr>
+<tr>
+<td> {{form_widget(form.id)}}</td>
+<td> {{form_errors(form.id)}}</td>
+</tr>
+
+</table>
+
+
+{{form_end(form)}}
+
+</div>
+{% endblock body %}

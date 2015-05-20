@@ -1,0 +1,8 @@
+# Bootstrop
+opp/bootstrop*
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*

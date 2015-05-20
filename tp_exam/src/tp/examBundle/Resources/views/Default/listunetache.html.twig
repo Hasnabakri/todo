@@ -1,0 +1,32 @@
+
+{% extends '::base.html.twig' %}
+{% block body %}
+<style>
+.ss{
+     	width: 250px;
+	margin: 50px  10px 40px 150px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	box-shadow: 0 0 15px #0066CC;
+	-moz-box-shadow: 0 0 15px #0066CC;
+	-webkit-box-shadow: 0 0 15px #0066CC;
+}
+
+</style>
+
+<div class="ss">
+    <h2>TODO.COM</h2>
+<p><ul>
+ <h3>{{tache.intitule}} : </h3> <br>
+<li>{{tache.description}} <br>
+<li>A faire avant le <br/>
+	{{ tache.date|date('Y-m-d H:i:s') }} <br>
+  <a href="{{ path('list') }}">Retour</a></br>
+  <h2>copyright..</h2>
+</p>
+</div>
+ {% endblock  %}
+ 

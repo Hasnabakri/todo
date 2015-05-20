@@ -1,0 +1,60 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<style>
+.ss{
+     	width: 250px;
+	margin: 50px  10px 40px 150px;
+	background: #fff;
+	padding: 20px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	box-shadow: 0 0 15px #0066CC;
+	-moz-box-shadow: 0 0 15px #0066CC;
+	-webkit-box-shadow: 0 0 15px #0066CC;
+}
+</style>
+
+<div class="ss">
+
+<table>
+<tr>
+<td><h3>
+TODO.COM
+</h3>
+</td>
+</tr>
+{{form_start(form)}}<br>
+<tr>
+<td> Ajouter une chose à faire :</td>
+</tr>
+<tr>
+<td> {{form_widget(form.intitule)}}</td>
+<td> {{form_errors(form.intitule)}}</td>
+</tr>
+<tr>
+<td> Description de la chose à faire:</td>
+</tr>
+<tr>
+<td> {{form_widget(form.description)}}</td>
+<td> {{form_errors(form.description)}}</td>
+</tr>
+<tr>
+<td> Faire au plus tard:</td>
+</tr>
+<tr>
+<td> {{form_widget(form.date)}}</td>
+<td> {{form_errors(form.date)}}</td>
+</tr>
+<tr>
+<td> {{form_widget(form.Valider)}}
+<a href="{{ path('list') }}">{{ form_widget(form.Retour) }}</a></td>
+
+</tr>
+</table>
+
+
+{{form_end(form)}}
+
+</div>
+{% endblock body %}

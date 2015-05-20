@@ -1,0 +1,5 @@
+tpexam:
+    resource: "@tpexamBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
